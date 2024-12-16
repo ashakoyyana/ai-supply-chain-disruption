@@ -1,1 +1,3 @@
 # ai-supply-chain-disruption
+Project Overview
+The AI-Driven Supply Chain Disruption Predictor and Inventory Optimization System is an advanced AI-powered solution designed to revolutionize supply chain management. The system monitors global supply chain data, predicts potential disruptions, and optimizes inventory levels accordingly. By leveraging Large Language Models (LLMs) like OpenAI GPT and Meta LLaMA for natural language processing (NLP) and data analysis, the system can predict risks in supply chains and automate inventory adjustments. Real-time alerts are provided via Slack or Email, ensuring businesses can respond proactively to supply chain disruptions.
