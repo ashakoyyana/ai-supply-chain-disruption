@@ -1,0 +1,20 @@
+Sample Dataset for Coffee Bean Risks
+id	title	risk_level	stock_adjustment	Published At
+Drought in Brazil	High	500	2025-01-15
+Coffee Leaf Rust Outbreak	Medium	200	2025-01-10
+Port Congestion in Vietnam	High	1000	2025-01-20	
+Political Instability in Colombia	Low	300	2025-01-05
+Price Fluctuations Due to Demand	Medium	400	2025-01-18
+Labor Shortages in Ethiopia	Medium	150	2025-01-12
+Flooding in Central America	High	800	2025-01-08
+Global Shipping Delays	High	600	2025-01-22
+Climate Change Impact on Arabica Coffee Yield	High	500 units	2025-01-22
+Coffee Leaf Rust Outbreak in Central America	High	700 units	2024-11-15
+Price Volatility in Coffee Futures	Medium	300 units	2024-12-01
+Drought Impact in Brazil Coffee Regions	High	600 units	2024-09-30
+Geopolitical Instability in Colombia	Medium	200 units	2024-08-10
+Transportation Delays in Vietnam Ports	Low	100 units	2024-07-22
+Labor Shortage During Harvest in Guatemala	High	400 units	2024-06-05
+Pest Infestation in Robusta Coffee in Vietnam	Medium	300 units	2024-04-19
+Export Tariffs on Coffee Beans from Ethiopia	Low	150 units	2024-03-14
+Coffee Plantations Affected by Floods in Kenya	High	500 units	2024-02-28
