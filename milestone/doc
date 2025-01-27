@@ -1,0 +1,44 @@
+.	Data Loading:
+	The dataset is loaded from the CSV file (analyzed_supply_chain_data.csv), which contains data about regions, tea supply chain information, sentiment scores, and other related details.
+.	Class Initialization:
+	The InventoryManagementSystem class is initialized with three parameters:
+	regions: A list of unique regions extracted from the dataset.
+	default_warehouse_size: A default size for each region's warehouse (set to 1000 cubic meters here).
+	slack_webhook_url: A URL to send alerts to a Slack channel.
+	The class initializes an inventory dictionary for each region with warehouse size, available space, materials, and total cost.
+.	Slack Notification:
+	The send_slack_notification() method sends alerts to Slack by posting a message to the provided webhook URL.
+	A payload with the alert message is sent in JSON format.
+.	Monthly Incoming (monthly_incoming()):
+	Prompts the user to enter the region name, material name, material size (in cubic meters), and cost.
+	If the material size exceeds the available warehouse space in that region, a "Stock Overflow" alert is triggered, and the operation is halted.
+	Otherwise, the material is added to the inventory, the available space is updated, and the total cost is adjusted.
+.	Monthly Outgoing (monthly_outgoing()):
+	Prompts the user to enter the region and the material name to be supplied (removed from the inventory).
+	If the material is found in the region’s inventory, it is removed, the space is freed up, and the total cost is updated.
+	If the material is not found, an error message is displayed.
+.	Display Inventory (display_inventory()):
+	Prompts the user to input a region name.
+	Displays the current inventory status for that region, including the warehouse size, available space, and details of the materials (name, size, cost).
+.	Generate Risk Alerts (generate_risk_alerts()):
+	Generates risk alerts based on sentiment scores and available warehouse space for specific regions or months (if filters are applied).
+	Checks sentiment score:
+	If below 0.50, a high-risk alert is generated.
+	If between 0.50 and 0.52, a moderate-risk warning is generated.
+	Otherwise, the status is low-risk.
+	Checks the warehouse space:
+	Alerts are generated if available space is critically low or exceeds capacity.
+	These alerts are sent to Slack.
+.	Save Inventory to CSV (save_inventory_to_csv()):
+	Saves the current inventory status, including the material details and available space, into a CSV file (Sugarcane_Supply_Chain_2021_2024.csv).
+.	Main Loop:
+	The system runs in a continuous loop, offering the following choices to the user:
+	1. Monthly Incoming: Adds incoming materials to inventory.
+	2. Monthly Outgoing: Removes supplied materials from inventory.
+	3. Display Inventory: Shows the current status of the inventory for a specific region.
+	4. Generate Risk Alerts: Creates alerts based on sentiment and warehouse space conditions.
+	5. Save and Exit: Saves the inventory status to a CSV file and exits the system.
+.	User Input:
+	The system prompts the user to enter region names, material details, and filter options via the console.
+	Based on user input, it triggers corresponding actions (stocking materials, supplying, generating alerts, etc.).
+The system interacts with the user via the console to manage inventory, handle incoming and outgoing materials, generate risk alerts, and save the current inventory state. All alerts are sent to Slack in real-time for monitoring.
